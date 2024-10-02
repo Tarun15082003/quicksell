@@ -1,6 +1,6 @@
 export let group_by = {
   Status: {
-    todo: {
+    Todo: {
       value: "Todo",
       pic: (
         <svg
@@ -18,7 +18,7 @@ export let group_by = {
         </svg>
       ),
     },
-    done: {
+    Done: {
       value: "Done",
       pic: (
         <svg
@@ -48,7 +48,7 @@ export let group_by = {
       ),
     },
 
-    inprogress: {
+    Inprogress: {
       value: "In Progress",
       pic: (
         <svg
@@ -73,7 +73,7 @@ export let group_by = {
       ),
     },
 
-    cancelled: {
+    Cancelled: {
       value: "Cancelled",
       pic: (
         <svg
@@ -103,7 +103,7 @@ export let group_by = {
       ),
     },
 
-    backlog: {
+    Backlog: {
       value: "Backlog",
       pic: (
         <svg
@@ -127,7 +127,7 @@ export let group_by = {
   Users: {},
 
   Priority: {
-    nopriority: {
+    Nopriority: {
       value: "No priority",
       pic: (
         <svg
@@ -156,7 +156,7 @@ export let group_by = {
       ),
     },
 
-    urgent: {
+    Urgent: {
       value: "Urgent",
       pic: (
         <svg
@@ -174,7 +174,7 @@ export let group_by = {
       ),
     },
 
-    high: {
+    High: {
       value: "High",
       pic: (
         <svg
@@ -200,7 +200,7 @@ export let group_by = {
       ),
     },
 
-    medium: {
+    Medium: {
       value: "Medium",
       pic: (
         <svg
@@ -226,7 +226,7 @@ export let group_by = {
         </svg>
       ),
     },
-    low: {
+    Low: {
       value: "Low",
       pic: (
         <svg

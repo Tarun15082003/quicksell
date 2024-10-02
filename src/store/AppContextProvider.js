@@ -9,14 +9,14 @@ const AppContextProvider = ({ children }) => {
   const [appdata, setappdata] = useState({});
 
   function changegroupedBy(value) {
+    localStorage.setItem("groupedBy", value);
     setgroupedBy(value);
-    const val = dropdownMenu;
     setDropDownMenu(false);
   }
 
   function changesortedBy(value) {
+    localStorage.setItem("sortedBy", value);
     setsortedBy(value);
-    const val = dropdownMenu;
     setDropDownMenu(false);
   }
 
@@ -54,6 +54,21 @@ const AppContextProvider = ({ children }) => {
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
       });
+
+    const storedGroupedBy = localStorage.getItem("groupedBy");
+    const storedSortedBy = localStorage.getItem("sortedBy");
+
+    if (storedGroupedBy) {
+      changegroupedBy(storedGroupedBy);
+    } else {
+      localStorage.setItem("groupedBy", groupedBy);
+    }
+
+    if (storedSortedBy) {
+      changesortedBy(storedSortedBy);
+    } else {
+      localStorage.setItem("sortedBy", sortedBy);
+    }
   }, []);
 
   return (

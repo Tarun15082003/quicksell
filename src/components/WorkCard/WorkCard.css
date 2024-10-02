@@ -1,0 +1,38 @@
+.workcardcontainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vh;
+  height: auto;
+  justify-content: space-around;
+}
+
+.title {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.details {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

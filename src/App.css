@@ -1,3 +1,9 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .head {
   height: 5vh;
   padding-left: 20px;
@@ -7,4 +13,9 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px #ddd;
+}
+
+.actionspace {
+  flex-grow: 1;
+  background-color: #f3f6fa;
 }

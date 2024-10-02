@@ -8,7 +8,7 @@ import AppContext from "./store/app-context";
 function App() {
   return (
     <AppContextProvider>
-      <div>
+      <div className="container">
         <header className="head">
           <ToolBar />
         </header>

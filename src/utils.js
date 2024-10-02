@@ -1,6 +1,17 @@
+const priorityMap = {
+  4: "Urgent",
+  3: "High",
+  2: "Medium",
+  1: "Low",
+  0: "No priority",
+};
+
 export const groupTickets = (tickets, groupBy) => {
   return Object.values(tickets).reduce((groups, ticket) => {
-    const groupKey = ticket[groupBy];
+    let groupKey = ticket[groupBy];
+    if (groupBy === "priority") {
+      groupKey = priorityMap[groupKey];
+    }
     if (!groups[groupKey]) groups[groupKey] = [];
     groups[groupKey].push(ticket);
     return groups;

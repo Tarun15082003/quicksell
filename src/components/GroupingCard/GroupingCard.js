@@ -1,7 +1,26 @@
+import { useContext } from "react";
+import WorkCard from "../WorkCard/WorkCard";
 import "./GroupingCard.css";
+import AppContext from "../../store/app-context";
 
-const GroupingCard = ({ value, pic }) => {
-  const cnt = 0;
+const GroupingCard = ({ value, pic, data }) => {
+  const { sortedBy } = useContext(AppContext);
+
+  let cnt = 0;
+  let sortedData = null;
+  if (data) {
+    cnt = Object.keys(data).length;
+    sortedData = Object.keys(data).sort((a, b) => {
+      if (sortedBy === "Priority") {
+        console.log(data[a].priority);
+        return data[a].priority - data[b].priority;
+      } else if (sortedBy === "Title") {
+        return data[a].title.localeCompare(data[b].title);
+      }
+      return 0;
+    });
+  }
+
   return (
     <div className="grouping-card">
       <div className="grouping-header">
@@ -53,7 +72,12 @@ const GroupingCard = ({ value, pic }) => {
           </svg>
         </span>
       </div>
-      <div className="grouping-body">BODY</div>
+      <div className="grouping-body">
+        {data &&
+          sortedData.map((key) => {
+            return <WorkCard key={key} element={data[key]} />;
+          })}
+      </div>
     </div>
   );
 };
