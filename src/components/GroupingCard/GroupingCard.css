@@ -1,0 +1,22 @@
+.grouping-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grouping-header {
+  width: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f7f8fa;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
